@@ -11,10 +11,10 @@
 # gestor de dispositivos
 descargar repositorio
 ```sh
-git clone https://github.com/init20/gestor.git
+git clone https://github.com/init20/gestor_1.git
 ```
 ```sh
-cd gestor
+cd gestor_1
 ```
 Instalar dependencias
 

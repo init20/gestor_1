@@ -47,6 +47,9 @@ module.exports.routes = {
   'GET /asistencias/list/:id': 'AsistenciasController.list',
   'POST /asistencias/create': 'AsistenciasController.create',
   'POST /asistencias/update': 'AsistenciasController.update',
+  'GET /login':{
+    view :'login'
+  },
 
 
   //lectores

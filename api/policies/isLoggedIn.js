@@ -1,6 +1,7 @@
 module.exports = async function (req, res, next) {
 
   if (!req.headers || !req.headers.authorization) {
+    res.redirect('/login');
     return res.badRequest({err: 'authorization header is missing'});
   }
   const tokenParam = req.headers.authorization;

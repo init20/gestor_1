@@ -77,7 +77,6 @@ module.exports.views = {
 
   layout: 'layout',
   homepage: 'homepage',
-  list: '/lectores/list',
 
   /****************************************************************************
   *                                                                           *

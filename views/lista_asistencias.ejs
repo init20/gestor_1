@@ -1,0 +1,31 @@
+
+<h1 class="display-4">Asistencias</h1>
+<div class="row">
+  <div class="col-sm-5 col-sm-offset-2 col-md-7 col-md-offset-0">
+    <a href="/clases/list" type="button" class="btn btn-primary" style="float:right">Volver atrás</a>
+</div>
+</div>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Clase</th>
+            <th>Run Estudiante</th>
+            <th>Fecha</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% asistencias.forEach(function(asistencia){ %>
+            <tr>
+                <td><%= asistencia.id_asi %></td>
+                <td><%= asistencia.clase %></td>
+                <td><%= asistencia.runEstudiante %></td>
+                <td><%= asistencia.fecha %></td>
+                <td></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

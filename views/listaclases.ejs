@@ -1,0 +1,29 @@
+<h1 class="display-4">Clases</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Dispositivo ID</th>
+            <th>fecha</th>
+            <th>RUN Académico</th>
+            <th>Hora inicio</th>
+            <th>Hora término</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% clases.forEach(function(clase){ %>
+            <tr>
+                <td><%= clase.id_cla %></td>
+                <td><%= clase.id_lec %></td>
+                <td><%= clase.fecha %></td>
+                <td><%= clase.runAcademico %></td>
+                <td><%= clase.horaInicio %></td>
+                <td><%= clase.horaTermino %></td>
+                <td>
+                    <a href="/asistencias/list/<%= clase.id_cla %>" class="btn btn-primary">Ver asistencias</a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

@@ -26,7 +26,7 @@ module.exports.routes = {
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
-
+/*
   'POST /companies' : 'CompanyController.create',
   'GET /companies' : 'CompanyController.find',
   'GET /companies/:id' : 'CompanyController.findOne',
@@ -41,6 +41,27 @@ module.exports.routes = {
   //Applications
   'POST /applications' :'ApplicationController.create',
   'GET /applications' :'ApplicationController.find',
+*/
+  //asistencias
+  'GET /asistencias/list': 'AsistenciasController.list',
+  'GET /asistencias/list/:id': 'AsistenciasController.list',
+  'POST /asistencias/create': 'AsistenciasController.create',
+  'POST /asistencias/update': 'AsistenciasController.update',
+
+
+  //lectores
+  'GET /lectores/list':'LectoresController.list',
+  'GET /lectores/add':'LectoresController.add',
+//  'POST /lectores/add':'LectoresController.add',
+  'POST /lectores/create':'LectoresController.create',
+  'GET /lectores/edit/:id':'LectoresController.edit',
+  'POST /lectores/update/:id':'LectoresController.update',
+  'POST /lectores/delete/:id':'LectoresController.delete',
+//clases
+  'GET /clases/list':'ClasesController.list',
+  'POST /clases':'ClasesController.create',
+
+
 
   //User
   'POST /user/login' : 'UserController.login',

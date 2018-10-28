@@ -1,0 +1,32 @@
+<h1 class="display-4">Lectores</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID real</th>
+            <th>Lector ID</th>
+            <th>IP</th>
+            <th>Faculad</th>
+            <th>Sala</th>
+            <th>Última actividad</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% lectores.forEach(function(lector){ %>
+            <tr>
+                <td><%= lector.id %></td>
+                <td><%= lector.id_lec %></td>
+                <td><%= lector.ip %></td>
+                <td><%= lector.facultad %></td>
+                <td><%= lector.sala %></td>
+                <td><%= lector.estado %></td>
+                <td>
+                    <a href="/lectores/edit/<%= lector.id %>" class="btn btn-primary">Editar</a>
+                    <form class="d-inline" action="/lectores/delete/<%= lector.id %>" method="post">
+                        <input type="submit" value="Eliminar" class="btn btn-danger">
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

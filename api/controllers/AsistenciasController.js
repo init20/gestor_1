@@ -1,6 +1,6 @@
 
 module.exports = {
-	list: function(req, res){
+	lista: function(req, res){
     //console.log(req.params.id);
       Asistencias.find({clase:req.params.id}).exec(function(err, asistencias){
             if(err){
@@ -21,7 +21,7 @@ module.exports = {
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.redirect('/asistencias/list');
+            res.redirect('/asistencias/lista');
         });
     },
     delete: function(req, res){
@@ -30,7 +30,7 @@ module.exports = {
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.redirect('/asistencias/list');
+            res.redirect('/asistencias/lista');
         });
 
         return false;
@@ -49,7 +49,7 @@ module.exports = {
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.redirect('/asistencias/list');
+            res.redirect('/asistencias/lista');
         });
 
         return false;

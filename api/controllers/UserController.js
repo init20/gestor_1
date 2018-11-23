@@ -5,6 +5,7 @@
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
 const Joi = require('joi');
+const localStorage = require('localStorage');
 module.exports = {
   /**
    * `UserController.signup()`
@@ -50,7 +51,22 @@ module.exports = {
         return res.badRequest({err: 'unauthorized'});
       }
       const token = JWTService.issuer({user: user.id}, '1 day');
-      return res.ok({token});
+      //console.log("aaa");
+      //ocalStorage.setItem("Autorized", token);
+      console.log(token);
+      if(typeof(Storage)!=='undifined'){
+        console.log("aaaa");
+      }else{
+        console.log("no aaaa");
+      }
+      //localStorage.setItem("Authorization",token);
+
+      console.log(localStorage);
+      localStorage.setItem("Authorization", token);
+      //window.localStorage.setItem("key", "token");
+      res.redirect('/lectores/lista');
+      //return res.ok({token});
+
 
     }
     catch (err) {
@@ -62,4 +78,3 @@ module.exports = {
   }
 
 };
-

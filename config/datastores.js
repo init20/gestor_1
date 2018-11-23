@@ -55,12 +55,31 @@ module.exports.datastores = {
      ***************************************************************************/
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
+
+//base de datos mysql
+
     adapter: 'sails-mysql',
     host: 'localhost',
     port: 3306,
     user: 'root', //optional
     password: '', //optional
-    database: 'sails32' //optional
+    database: 'probando123' //optional
+
+  /*
+    adapter: 'sails-sqlserver',
+    user: 'sa',
+    password: 'gatito',
+    host: 'DESKTOP-L0P36JS\SQLEXPRESS', // azure database DESKTOP-L0P36JS
+    database: 'gestor'*/
+    /*
+    adapter: 'sails-sqlserver-sailsv1',
+    user: 'sa',
+    password: 'gatito',
+    host: 'DESKTOP-L0P36JS\SQLEXPRESS',
+    database: 'gestor'*/
+
+
+
 
   },
 

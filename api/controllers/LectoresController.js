@@ -1,14 +1,14 @@
 module.exports = {
-	list:function(req, res){
+	lista:function(req, res){
         Lectores.find({}).exec(function(err, lectores){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
-            res.view('list', {lectores:lectores});
+            res.view('lista_lectores', {lectores:lectores});
         });
     },
-    add: function(req, res){
-        res.view('add');
+    agregar: function(req, res){
+        res.view('agregar');
     },
     create:function(req, res){
 
@@ -23,7 +23,7 @@ module.exports = {
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.redirect('/lectores/list');
+            res.redirect('/lectores/lista');
         });
     },
     delete: function(req, res){
@@ -32,21 +32,21 @@ module.exports = {
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.redirect('/lectores/list');
+            res.redirect('/lectores/lista');
         });
 
         return false;
     },
-    edit: function(req, res){
+    editar: function(req, res){
         Lectores.findOne({id:req.params.id}).exec(function(err, lector){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.view('edit', {lector:lector});
+            res.view('editar', {lector:lector});
         });
     },
-    update: function(req, res){
+    actualizar: function(req, res){
         //var title = req.body.title;
         //var body = req.body.body;
 
@@ -60,7 +60,7 @@ module.exports = {
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.redirect('/lectores/list');
+            res.redirect('/lectores/lista');
         });
 
         return false;

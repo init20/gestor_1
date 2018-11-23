@@ -16,5 +16,4 @@
        fecha: { type: 'string', required: true, columnName: 'ASI_FECHA' },
        runEstudiante: { type: 'string', required: true, columnName: 'ASI_RUN_ESTUDIANTE'},
      },
-     //connection:'mongodb'
  };

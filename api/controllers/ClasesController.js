@@ -1,10 +1,10 @@
 module.exports = {
-	list:function(req, res){
+	lista:function(req, res){
         Clases.find({}).exec(function(err, clases){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
-            res.view('listaclases', {clases:clases});
+            res.view('lista_clases', {clases:clases});
         });
     },
     create:function(req, res){
@@ -20,7 +20,7 @@ module.exports = {
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.redirect('/clases/list');
+            res.redirect('/clases/lista');
         });
     },
     delete: function(req, res){
@@ -29,7 +29,7 @@ module.exports = {
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.redirect('/clases/list');
+            res.redirect('/clases/lista');
         });
 
         return false;
@@ -48,7 +48,7 @@ module.exports = {
                 res.send(500, {error: 'Database Error'});
             }
 
-            res.redirect('/clases/list');
+            res.redirect('/clases/lista');
         });
 
         return false;

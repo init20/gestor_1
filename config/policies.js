@@ -17,14 +17,22 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+   '*': true,
 
-
+/*
   UserController:{
     '*': true
   },
   LectoresController:{
     '*': 'isLoggedIn'
-  }
+  },
+  ClasesController:{
+    '*': 'isLoggedIn'
+  },
+  AsistenciasController:{
+    '*': 'isLoggedIn'
+  }*/
+ //funcionarios red academicos
+
 
 };

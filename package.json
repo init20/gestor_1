@@ -1,5 +1,5 @@
 {
-  "name": "job-portal-api",
+  "name": "gestor de capturadores",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -9,12 +9,15 @@
     "bcrypt": "^1.0.3",
     "joi": "^13.1.2",
     "jsonwebtoken": "^8.1.1",
+    "localStorage": "^1.0.4",
     "lodash": "3.10.1",
     "sails": "^1.0.0-45",
     "sails-hook-orm": "^2.0.0-16",
     "sails-hook-sockets": "^1.4.0",
-    "sails-mongo": "^1.0.0-11",
-    "sails-mysql": "^1.0.0-17"
+    "sails-mssql": "^0.1.1",
+    "sails-mysql": "^1.0.0-17",
+    "sails-sqlserver": "^0.10.8",
+    "sails-sqlserver-sailsv1": "^0.10.10"
   },
   "devDependencies": {
     "eslint": "4.11.0"
@@ -29,9 +32,9 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/haidermalik504/job-portal-api.git"
+    "url": "git://github.com/init20/gestor-de-capturadores"
   },
-  "author": "haidermalik504",
+  "author": "exdi",
   "license": "",
   "engines": {
     "node": "8"

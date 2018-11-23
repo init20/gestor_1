@@ -26,46 +26,27 @@ module.exports.routes = {
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
-/*
-  'POST /companies' : 'CompanyController.create',
-  'GET /companies' : 'CompanyController.find',
-  'GET /companies/:id' : 'CompanyController.findOne',
-  'PATCH /companies/:id' : 'CompanyController.update',
-  'DELETE /companies/:id' : 'CompanyController.delete',
 
-
-  //Jobs
-  'POST /jobs' : 'JobController.create',
-  'GET /jobs' : 'JobController.find',
-
-  //Applications
-  'POST /applications' :'ApplicationController.create',
-  'GET /applications' :'ApplicationController.find',
-*/
   //asistencias
-  'GET /asistencias/list': 'AsistenciasController.list',
-  'GET /asistencias/list/:id': 'AsistenciasController.list',
+  'GET /asistencias/lista': 'AsistenciasController.lista',
+  'GET /asistencias/lista/:id': 'AsistenciasController.lista',
   'POST /asistencias/create': 'AsistenciasController.create',
   'POST /asistencias/update': 'AsistenciasController.update',
+  //login
   'GET /login':{
     view :'login'
   },
-
-
+  'POST /user/login' :'UserController.login',
   //lectores
-  'GET /lectores/list':'LectoresController.list',
-  'GET /lectores/add':'LectoresController.add',
-//  'POST /lectores/add':'LectoresController.add',
+  'GET /lectores/lista':'LectoresController.lista',
+  'GET /lectores/agregar':'LectoresController.agregar',
   'POST /lectores/create':'LectoresController.create',
-  'GET /lectores/edit/:id':'LectoresController.edit',
-  'POST /lectores/update/:id':'LectoresController.update',
+  'GET /lectores/editar/:id':'LectoresController.editar',
+  'POST /lectores/actualizar/:id':'LectoresController.update',
   'POST /lectores/delete/:id':'LectoresController.delete',
 //clases
-  'GET /clases/list':'ClasesController.list',
-  'POST /clases':'ClasesController.create',
-
-
-
+  'GET /clases/lista':'ClasesController.lista',
+  'POST /clases/create':'ClasesController.create',
   //User
   'POST /user/login' : 'UserController.login',
   'POST /user/signup' : 'UserController.signup',

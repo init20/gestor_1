@@ -2,7 +2,7 @@
 <h1 class="display-4">Asistencias</h1>
 <div class="row">
   <div class="col-sm-5 col-sm-offset-2 col-md-7 col-md-offset-0">
-    <a href="/clases/list" type="button" class="btn btn-primary" style="float:right">Volver atrás</a>
+    <a href="/clases/lista" type="button" class="btn btn-primary" style="float:right">Volver atrás</a>
 </div>
 </div>
 
@@ -20,7 +20,7 @@
     <tbody>
         <% asistencias.forEach(function(asistencia){ %>
             <tr>
-                <td><%= asistencia.id_asi %></td>
+                <td><%= asistencia.id %></td>
                 <td><%= asistencia.clase %></td>
                 <td><%= asistencia.runEstudiante %></td>
                 <td><%= asistencia.fecha %></td>

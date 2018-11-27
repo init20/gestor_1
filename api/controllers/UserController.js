@@ -62,9 +62,11 @@ module.exports = {
       //localStorage.setItem("Authorization",token);
 
       console.log(localStorage);
-      localStorage.setItem("Authorization", token);
+      localStorage.setItem('Authorization', token);
       //window.localStorage.setItem("key", "token");
+      localStorage.getItem('Authorization');
       res.redirect('/lectores/lista');
+      console.log(localStorage);
       //return res.ok({token});
 
 

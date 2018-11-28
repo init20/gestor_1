@@ -3,8 +3,9 @@
 
 ### Version
 1.0.0
+node version 8.11.3
 
-## Us0
+## US0
 
 
 ### Instalación
@@ -28,4 +29,3 @@ Correr servidor
 ```sh
 $ sails lift
 ```
-

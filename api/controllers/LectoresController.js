@@ -14,11 +14,10 @@ module.exports = {
 
 
 				var id_lec = req.body.id_lec;
-				var ip = req.body.ip;
 				var facultad = req.body.facultad;
 				var sala = req.body.sala;
 
-        Lectores.create({id_lec:id_lec, ip:ip, facultad:facultad, sala:sala}).exec(function(err){
+        Lectores.create({id_lec:id_lec, facultad:facultad, sala:sala}).exec(function(err){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }

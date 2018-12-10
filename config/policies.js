@@ -25,6 +25,7 @@ module.exports.policies = {
   },
   LectoresController:{
     lista: true,
+    actualizar: true,
   },
   ClasesController:{
     lista: true,

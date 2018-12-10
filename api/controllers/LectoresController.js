@@ -9,7 +9,6 @@ module.exports = {
 						if (aux===undefined){
 							res.view('login');
 						}else{
-							console.log("esto no");
 							res.view('lista_lectores', {lectores:lectores});
 						}
         });
@@ -63,18 +62,17 @@ module.exports = {
         //var body = req.body.body;
 
 				var id_lec = req.body.id_lec;
-				var ip = req.body.ip;
 				var facultad = req.body.facultad;
 				var sala = req.body.sala;
 				var estado = req.body.estado;
-        Lectores.update({id: req.params.id},{id_lec:id_lec, ip:ip, facultad:facultad, sala:sala, estado:estado}).exec(function(err){
+        Lectores.update({id: req.params.id},{id_lec:id_lec, facultad:facultad, sala:sala, estado:estado}).exec(function(err){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
 
             res.redirect('/lectores/lista');
         });
-
+				res.redirect('/lectores/lista');
         return false;
     },
 

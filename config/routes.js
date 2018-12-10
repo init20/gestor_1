@@ -36,6 +36,8 @@ module.exports.routes = {
   'GET /login':{
     view :'login'
   },
+  'GET /':'LectoresController.lista',
+
   'POST /user/login' :'UserController.login',
   /////
 

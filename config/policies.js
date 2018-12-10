@@ -19,19 +19,25 @@ module.exports.policies = {
 
    '*': true,
 
-/*
+
   UserController:{
     '*': true
   },
   LectoresController:{
-    '*': 'isLoggedIn'
+    lista: true,
   },
   ClasesController:{
-    '*': 'isLoggedIn'
+    lista: true,
+    create: false,
+    agregar:true,
+    delete: true,
+    edit: true,
+    actualizar:true,
   },
   AsistenciasController:{
-    '*': 'isLoggedIn'
-  }*/
+    list:true,
+    create:false,
+  }
  //funcionarios red academicos
 
 

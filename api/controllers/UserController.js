@@ -6,6 +6,7 @@
  */
 const Joi = require('joi');
 const localStorage = require('localStorage');
+var request = require('request');
 module.exports = {
   /**
    * `UserController.signup()`
@@ -59,15 +60,19 @@ module.exports = {
       }else{
         console.log("no aaaa");
       }
-      //localStorage.setItem("Authorization",token);
-
       console.log(localStorage);
       localStorage.setItem('Authorization', token);
-      //window.localStorage.setItem("key", "token");
       localStorage.getItem('Authorization');
-      res.redirect('/lectores/lista');
-      console.log(localStorage);
-      //return res.ok({token});
+      //res.header("Authorization", token);
+      //var aux = {'Authorization: '+token};
+      headers: {authorization: token};
+
+        //res.view('lista_lectores', headers, {lectores:lectores});
+        req.authorization = token;
+        res.cookie('authorization', token, {signed:true});
+
+        res.redirect('/lectores/lista');
+        return token;
 
 
     }
@@ -77,6 +82,12 @@ module.exports = {
       }
       return res.serverError(err);
     }
+  },
+  getout: async function (req, res) {
+    //res.cookie('chocolatechip', 'undefined', {signed:true});
+    res.clearCookie('authorization');
+    res.redirect('/login');
+
   }
 
 };

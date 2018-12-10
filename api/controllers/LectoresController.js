@@ -1,14 +1,27 @@
+const localStorage = require('localStorage');
 module.exports = {
 	lista:function(req, res){
         Lectores.find({}).exec(function(err, lectores){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
-            res.view('lista_lectores', {lectores:lectores});
+						var aux = req.signedCookies.authorization;
+						if (aux===undefined){
+							res.view('login');
+						}else{
+							console.log("esto no");
+							res.view('lista_lectores', {lectores:lectores});
+						}
         });
     },
     agregar: function(req, res){
-        res.view('agregar');
+			var aux = req.signedCookies.authorization;
+			if (aux===undefined){
+				res.view('login');
+			}else{
+				res.view('agregar');
+			}
+
     },
     create:function(req, res){
 

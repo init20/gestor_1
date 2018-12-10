@@ -37,6 +37,8 @@ module.exports.routes = {
     view :'login'
   },
   'POST /user/login' :'UserController.login',
+  /////
+
   //lectores
   'GET /lectores/lista':'LectoresController.lista',
   'GET /lectores/agregar':'LectoresController.agregar',
@@ -50,6 +52,7 @@ module.exports.routes = {
   //User
   'POST /user/login' : 'UserController.login',
   'POST /user/signup' : 'UserController.signup',
+  'GET /salir':'UserController.getout',
 
 
 

@@ -1,10 +1,17 @@
+const localStorage = require('localStorage');
 module.exports = {
 	lista:function(req, res){
         Clases.find({}).exec(function(err, clases){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
-            res.view('lista_clases', {clases:clases});
+						var aux = req.signedCookies.authorization;
+						if (aux===undefined){
+							res.view('login');
+						}else{
+							res.view('lista_clases', {clases:clases});
+						}
+
         });
     },
     create:function(req, res){

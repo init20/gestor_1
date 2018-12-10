@@ -1,4 +1,4 @@
-
+const localStorage = require('localStorage');
 module.exports = {
 	lista: function(req, res){
     //console.log(req.params.id);
@@ -6,7 +6,13 @@ module.exports = {
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
-            res.view('lista_asistencias', {asistencias:asistencias});
+						var aux = req.signedCookies.authorization;
+						if (aux===undefined){
+							res.view('login');
+						}else{
+							res.view('lista_asistencias', {asistencias:asistencias});
+						}
+
             //console.error(asistencias);
         });
     },
@@ -20,8 +26,13 @@ module.exports = {
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
+						var aux = req.signedCookies.authorization;
+						if (aux===undefined){
+							res.view('login');
+						}else{
+							res.redirect('/asistencias/lista');
+						}
 
-            res.redirect('/asistencias/lista');
         });
     },
     delete: function(req, res){
